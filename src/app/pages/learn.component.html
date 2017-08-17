@@ -1,0 +1,34 @@
+<div class="margin" style="margin-top:0" fxLayout="row" fxLayout.xs="column" fxLayout.xs="column">
+
+  <div class="margin" fxFlex.sm="33%" fxFlex.md="28%" fxFlex.lg="16%" fxFlex.xl="16%">
+    <md-card class="Fixed margin">
+      <md-input-container>
+        <!--adds discovery query to frontend code-by-color #AB1A86-->
+        <input mdInput placeholder="Request" #requestString/>
+        <button md-icon-button mdSuffix >
+          <md-icon>send</md-icon>
+        </button>
+      </md-input-container>
+    </md-card>
+  </div>
+
+  <div class="margin" fxFlex fxLayout="column">
+    <div fxFlex *ngIf="!results.length">
+      <md-card *ngIf="!discoverySpinner" class="margin">
+        <md-card-header>
+          <md-card-title><strong>Topics you can Ask</strong></md-card-title>
+          <!--adds data-topics code-by-color #3B0256-->
+        </md-card-header>
+        <md-card-content>
+          <md-list fxFlex>
+            <div fxFlex>
+              <p md-line class=" text-wrap">here will be the results of your query to the Discovery Service...</p>
+            </div>
+          </md-list>
+        </md-card-content>
+      </md-card>
+      <md-spinner *ngIf="discoverySpinner"></md-spinner>
+    </div>
+    <!--adds discovery query to frontend code-by-color #AB1A86-->
+  </div>
+</div>

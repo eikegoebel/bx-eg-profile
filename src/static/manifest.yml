@@ -1,0 +1,8 @@
+applications:
+- memory: 64M
+  instances: 2
+  buildpack: staticfile_buildpack
+  # defines appname code-by-color #FFFFFF
+  name: bx-eg-profile
+  host: bx-eg-profile
+  domain: mybluemix.net
